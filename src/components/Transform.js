@@ -28,16 +28,16 @@ export default function Transform(props) {
         <div className='container' style={{color:props.mode==="dark"?"white":"black"}}>
         <h1>{props.heading}</h1>
          <div className="form-group">
-        <textarea className="form-control" rows="9" id="comment" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="dark"?"gray":"white",color:props.mode==="dark"?"white":"black"}}></textarea>
+        <textarea className="form-control" rows="9" id="comment" value={text} onChange={handleOnChange} style={{backgroundColor:props.mode==="dark"?"#4040b0":"white",color:props.mode==="dark"?"white":"black"}}></textarea>
         </div>
-        <button type="button" className="btn btn-primary my-3" onClick={handleUpClick}>convert to uppercase</button>
-        <button type="button" className="btn btn-primary my-3 mx-3" onClick={handleLoClick}>convert to lowercase</button>
-        <button type="button" className="btn btn-primary mx-3" onClick={handleclear}>clear text</button>
+        <button type="button" className="btn btn-primary my-1 mx-1" onClick={handleUpClick}>convert to uppercase</button>
+        <button type="button" className="btn btn-primary my-1 mx-1" onClick={handleLoClick}>convert to lowercase</button>
+        <button type="button" className="btn btn-primary mx-1 my-1" onClick={handleclear}>clear text</button>
 
         </div>
         <div className='container'style={{color:props.mode==="dark"?"white":"black"}}>
             <h1>Your text summary</h1>
-            <p>{text.split(" ").length} words and {text.length} characters</p>
+            <p>{text.split( /\s+/).filter((element)=>{return element.length!==0}).length} words and {text.length} characters</p>
             <h2>Preview</h2>
             <p>{text.length>0?text:"Enter something to preview it here "}</p>
         </div>

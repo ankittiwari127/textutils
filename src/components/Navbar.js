@@ -7,12 +7,7 @@ export default function Navbar(props) {
   
   <div className="collapse navbar-collapse" id="navbarNavDropdown">
     <ul className="navbar-nav">
-      <li className="nav-item active">
-        <a className="nav-link" href="/">Home</a>
-      </li>
-      <li className="nav-item active">
-        <a className="nav-link" href="/">{props.about}</a>
-      </li>
+      
       
     </ul>
     <div className={`form-check form-switch text-${props.mode==="light"?"dark":"light"}`}>

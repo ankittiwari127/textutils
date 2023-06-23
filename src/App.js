@@ -37,7 +37,7 @@ function App() {
 <Navbar title="Textutlis" about ="about" mode={mode} togglemode={togglemode}/>
 <Alert alert={alert}/>
 <div className="container my-3">
-<Transform heading="Enter the text and analyse" mode={mode} showalert={showalert}/>
+<Transform heading="Try textutils-clear text,convert to upper and lower case" mode={mode} showalert={showalert}/>
 </div>
     </>
   );
